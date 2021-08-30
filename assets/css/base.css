@@ -41,3 +41,13 @@ html {
     display: flex;
     flex-wrap: wrap;
 }
+
+/* Animation */
+@keyframes faceIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

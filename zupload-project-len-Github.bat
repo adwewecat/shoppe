@@ -1,4 +1,4 @@
-CD /e e:\project-shoppe\shoppe
+CD /d d:\LAP_TRINH\project-shoppe\shoppe
 
 git status
 

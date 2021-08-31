@@ -74,6 +74,7 @@
 }
 
 
+/* =============== Begin ======================== */
 /* Code cho icon facebook và Instagram */
 .header__navbar-icon-link { 
     color: var(--white-color);
@@ -143,3 +144,127 @@
 .header__qr-link:nth-child(2) {
     margin-right: 7px;
 }
+
+/*  Code cho icon facebook và Instagram */
+/* =============== END ======================== */
+
+
+
+
+
+/* =============== Begin ======================== */
+/* BEGIN Phần Thông Báo mới */
+
+/* kHUNG BÊN NGOÀI, BAO TRÙM TOÀN BỘ BỐ CỤC THÔNG BÁO */
+.header__notify {
+    position: absolute;
+    top: 118%;
+    width: 404px;
+    right: 0px;
+    border: 1px solid #D3D3D3;
+    background-color: var(--white-color);
+
+}
+
+/* THANH MÀU TRẮNG ĐẦU TIÊN CỦA PHẦN THÔNG BÁO */
+.header__notify-header {
+    height: 40px;
+    background-color: var(--white-color);
+}
+/* thanh h3 nằm trong phần thông báo */
+.header__notify-header h3 {
+    color: #999;
+    margin: 0; /*Bỏ magin mặc định của h3*/
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 40px; /*Canh giữa , cho chiều cao bằng chiều cao của thanh đầu*/
+}
+
+
+/* thẻ ul */
+.header__notify-list {
+    padding-left: 0; /*Bỏ padding mặc định của trình duyệt*/
+    
+
+
+}
+
+.header__notify-item {
+    display: flex;
+
+}
+
+.header__notify-item--viewed { 
+    background-color: rgba(238,75,43,0.09);
+}
+
+
+/* Thẻ a bao bọc cả 1 hàng link sản phẩm */
+.header__notify-link {
+    display: flex;
+    padding: 12px;
+    text-decoration: none;
+    /* background-color: rgba(238,75,43,0.09); */
+    width: 100%;
+    box-sizing: inherit;
+
+}
+
+.header__notify-link:hover {
+    background-color: rgba(43, 238, 157, 0.09); 
+}
+
+
+/* Hình Anhr sản phẩm */
+.header__notify-img {
+    width: 45px;
+    object-fit: contain; /*fix ảnh, không bị méo*/
+
+}
+
+.header__notify-info {
+    margin-left: 12px;
+
+}
+
+/* Tên sản phẩm */
+.header__notify-name {
+    display: block;
+    font-size: 1.4rem;
+    color: var(--black-color);
+    font-weight: 400; /*Chữ Đẫm*/
+
+}
+
+.header__notify-description {
+    display: block;
+    font-size: 1.2rem;
+    color: #756F6E;
+    line-height: 1.6rem;
+}
+
+
+/* Nút Xem Tất Cả */
+.header__notify-footer {
+    display:flex;
+    text-align: center;
+    height: 3rem;
+    background-color: #ccc;
+    justify-content: center; /*Canh giữa Item*/
+}
+
+.header__notify-footer:hover {
+    cursor: text;
+}
+
+/* Nút Xem Tất Cả */
+.header__notify-footer-btn {
+    text-decoration: none;
+    color: var(--text-color);
+    padding: 10px 10px;
+    align-items: center; /*Canh giữa chữ trong item*/
+}
+
+
+/* END Phần Thông Báo mới */
+/* =============== End ======================== */

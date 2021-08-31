@@ -47,7 +47,7 @@
     
     
                     <ul class="header__navbar-list">
-                        <li class="header__navbar-item">
+                        <li class="header__navbar-item header__navbar-item--has-notify">
                             <a href="" class="header__navbar-item-link">
                                 <i class="header__navbar-icon far fa-bell"></i>
                                 Thông Báo
@@ -73,8 +73,8 @@
                                         <a href="" class="header__notify-link">
                                             <img src="./assets/img/san-pham/xiaomi-mi-11-ultra.jpg" alt="Xiaomi Mi 11 Ultra" class="header__notify-img">
                                             <div class="header__notify-info">
-                                                <span class="header__notify-name">Xiaomi Mi 11 Ultra Ultra Ultra Ultra Ultra Ultra Ultra</span>
-                                                <span class="header__notify-description">Mô tả điện thoại Xiaomi Mi 11 Ultra</span>
+                                                <span class="header__notify-name">Xiaomi Mi 11 Ultra Ultra Ultra Ultra Ultra Ultra Ultra Ultra Ultra Ultra</span>
+                                                <span class="header__notify-description">Mô tả điện thoại Xiaomi Mi 11 Ultra Mô tả điện thoại Xiaomi Mi 11 Ultra Mô tả điện thoại Xiaomi Mi 11 Ultra Mô tả điện thoại Xiaomi Mi 11 Ultra</span>
                                             </div>
                                         </a>
                                     </li>
@@ -96,8 +96,8 @@
 
                             </div>
                             <!-- Begin hover Thông Báo -->
-
                         </li>
+
                         <li class="header__navbar-item">
                             <a href="" class="header__navbar-item-link">
                                 <i class="header__navbar-icon far fa-question-circle"></i>
@@ -119,5 +119,68 @@
 
         </footer>
     </div>
+
+
+<!-- Begin Modal -->
+    <div class="modal">
+        <div class="modal__overlay"></div>
+
+        <div class="modal__body">
+            <div class="modal__inner">
+
+                <!-- Authen form -->
+                <div class="auth-form">
+                    <div class="auth-form__header">
+                        <h3 class="auth-form__heading">Đăng Ký</h3>
+                        <span class="auth-form__switch-btn">Đăng Nhập</span>
+                    </div>
+
+                    <div class="auth-form__form">
+                        <div class="auth-form__group">
+                            <input type="text" class="auth-form__input" placeholder="Nhập Email">
+                        </div>
+                        <div class="auth-form__group">
+                            <input type="password" class="auth-form__input" placeholder="Nhập Mật Khẩu">
+                        </div>
+                        <div class="auth-form__group">
+                            <input type="password" class="auth-form__input" placeholder="Nhập Lại Mật Khẩu">
+                        </div>
+                    </div>
+
+                    <div class="auth-form__aside">
+                        <p class="auth-form__policy-text">
+                            Bằng Việc Đăng Ký , Bạn Đã Đồng Ý Với Shop Về 
+                            <a href="" class="auth-form__policy-link">Điều Khoản Dịch Vụ</a> &
+                            <a href="" class="auth-form__policy-link">Chính Sách Bảo Mật</a>
+                        </p>
+                    </div>
+
+                    <div class="auth-form__controls">
+                        <button class="btn">TRỞ LẠI</button>
+                        <button class="btn btn--primary">Đăng Ký</button>
+                    </div>
+
+                    <div class="auth-form__socials">
+
+                        <a href="" class="btn btn--witch-icon">
+                            <i class="fab fa-facebook-square"></i>
+                            Kết Nối Với Facebook
+                        </a>
+
+                        <a href="" class="btn btn--witch-icon">
+                            <i class="fab fa-google-plus-square"></i>
+                            Kết Nối Với Google
+                        </a>
+                    </div>
+
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+<!-- End Modal -->
+
+
 </body>
 </html>

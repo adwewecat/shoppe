@@ -29,6 +29,11 @@
 }
 
 
+.header__navbar-item--has-notify:hover .header__notify{
+    display: block;
+}
+
+
 /* Code cho phần  */
 .header__navbar-item,
 .header__navbar-item-link {
@@ -163,8 +168,30 @@
     right: 0px;
     border: 1px solid #D3D3D3;
     background-color: var(--white-color);
+    transform-origin: 95% 0%; /*Thay đổi tâm của animation */
+    animation: headerNotifyGrowth ease-in 0.2s;
+    will-change: opacity, transform; /*Tối ưu chuyển động animation cho nhiều trình duyệt*/
+    cursor: default; /*Khi di chuột qua ko đổi thành bàn tay*/
+    user-select: none; /*Không cho copy*/
+    -webkit-user-select: none; /*trình duyệt cốc cốc*/
+    display: none;
 
 }
+
+
+/* di chuột vào sẽ ẩn hiện thông báo */
+@keyframes headerNotifyGrowth {
+    from {
+        opacity: 0;
+        transform: scale(0); /*Kích thước ko có*/
+    }
+    to {
+        opacity: 1;
+        transform: scale(1); /*Kích thước như cũ*/
+    }
+}
+
+
 
 /* THANH MÀU TRẮNG ĐẦU TIÊN CỦA PHẦN THÔNG BÁO */
 .header__notify-header {
@@ -215,6 +242,7 @@
 }
 
 
+
 /* Hình Anhr sản phẩm */
 .header__notify-img {
     width: 45px;
@@ -231,8 +259,9 @@
 .header__notify-name {
     display: block;
     font-size: 1.4rem;
-    color: var(--black-color);
-    font-weight: 400; /*Chữ Đẫm*/
+    color: var(--text-color);
+    font-weight: 450; /*Chữ Đẫm*/
+    line-height: 1.6rem;
 
 }
 
@@ -240,7 +269,8 @@
     display: block;
     font-size: 1.2rem;
     color: #756F6E;
-    line-height: 1.6rem;
+    line-height: 1.8rem;
+    margin-top: 5px;
 }
 
 
@@ -248,9 +278,10 @@
 .header__notify-footer {
     display:flex;
     text-align: center;
-    height: 3rem;
-    background-color: #ccc;
+    height: 4rem;
+    /* background-color: #ccc; */
     justify-content: center; /*Canh giữa Item*/
+    margin-top: 5px;
 }
 
 .header__notify-footer:hover {
@@ -262,9 +293,40 @@
     text-decoration: none;
     color: var(--text-color);
     padding: 10px 10px;
-    align-items: center; /*Canh giữa chữ trong item*/
+    line-height: 2rem; /*Canh giữa chữ trong item*/
+    font-size: 1.4rem;
+    font-weight: 400;
+    width: 100%;
+    /* background-color: #ccc; */
+}
+
+
+/* Tạo cầu bắc để link khi rê chuột xuống khoảng cách không bị mất khi hover */
+.header__notify::before {
+    position: absolute;
+    content: "";
+    border-width: 20px 30px;
+    border-style: solid;
+    border-color: transparent transparent var(--white-color) transparent;
+    right: 1px;
+    top:-30px;
+    /* display: none; */
+    /* background-color:red; */
+}
+
+.header__notify::after {
+    position: absolute;
+    content: "";
+    width: 100px;
+    height: 20px;
+    right: -5px;
+    top: -13px;
+    /* display: none; */
+    /* background-color:green; */
 }
 
 
 /* END Phần Thông Báo mới */
 /* =============== End ======================== */
+
+

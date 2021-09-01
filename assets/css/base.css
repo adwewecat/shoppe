@@ -20,7 +20,8 @@ html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}main{display:b
 }
 
 *{
-    box-sizing: inherit; 
+    box-sizing: border-box; /* lÀM Kích thước không bị thay đổi khi làm dầy padding và border */
+    
 }
 
 html {
@@ -49,7 +50,7 @@ html {
 }
 
 /* Animation */
-@keyframes faceIn {
+@keyframes fadeIn {
     from {
         opacity: 0;
     }
@@ -78,7 +79,7 @@ html {
     right: 0;
     left: 0;
     display: flex;
-    animation: faceIn ease-in 0.5s;
+    animation: fadeIn ease-in 0.5s;
 }
 .modal__overlay {
     position: absolute;

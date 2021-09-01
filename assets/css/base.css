@@ -12,6 +12,10 @@ html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}main{display:b
     --black-color: #000;
     --text-color: #333;
     --border-color: #dbdbdb;
+
+    --navbar-height:34px;
+    --header-height:120px
+    --header-with-search-height:calc(var(var(--header-height)-var(var(--navbar-height))))
     
 }
 
@@ -140,3 +144,4 @@ html {
     background-color: #c3c3c3;
     color: #949494;
 }
+

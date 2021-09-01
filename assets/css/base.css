@@ -11,6 +11,7 @@ html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}main{display:b
     --white-color: #fff;
     --black-color: #000;
     --text-color: #333;
+    --border-color: #dbdbdb;
     
 }
 
@@ -53,6 +54,15 @@ html {
     }
 }
 
+@keyframes growth {
+    from {
+        transform: scale(var(--growth-form));
+    }
+    to{
+        transform: scale(var(--growth-to));
+    }
+}
+
 
 
 /* ====================================== */
@@ -64,6 +74,7 @@ html {
     right: 0;
     left: 0;
     display: flex;
+    animation: faceIn ease-in 0.5s;
 }
 .modal__overlay {
     position: absolute;
@@ -73,13 +84,59 @@ html {
 }
 
 .modal__body {
+    --growth-form : 0.7s;
+    --growth-to:1s;
     background-color: green;
     margin: auto;
     position: relative;
     z-index: 1; /*Hiện thị ưu tiên lên trên*/
-    background-color: var(--white-color);
-    border-radius: 5px; /*Bo góc*/
+    animation: growth linear 0.5s;
 }
 
 /* End Modal */
 /* ====================================== */
+
+
+
+/* button style */
+.btn {
+    min-width: 142px;
+    height: 36px;
+    text-decoration: none;
+    border: none;
+    border-radius: 2px;
+    font-size: 1.5rem;
+    padding: 0 12px;
+    outline: none;
+    cursor: pointer;
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.6rem;
+}
+
+.btn.btn--normal:hover {
+    background-color: rgba(0,0,0,0.1);
+
+}
+
+.btn.btn--size-s {
+    height: 32px;
+    font-size: 12px;
+    padding: 0 8px;
+}
+
+
+/* Phải có cả 2 class này mới được áp dụng */
+.btn.btn--primary {
+    color: var(--white-color);
+    background-color: var(--primary-color);
+}
+
+.btn.btn-disabled {
+    cursor: default;
+    filter: brightness(80%); /*Giamr độ sáng*/
+    background-color: #c3c3c3;
+    color: #949494;
+}

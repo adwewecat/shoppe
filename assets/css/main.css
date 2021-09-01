@@ -330,3 +330,145 @@
 /* =============== End ======================== */
 
 
+
+
+/* Authen modal */
+
+.auth-form {
+    width: 500px; 
+    background-color: var(--white-color);
+    border-radius: 5px; /*Bo góc*/
+    overflow: hidden; /*Không cho phép thèn con vượt ra ngoài thèn cha*/
+
+}
+
+
+.auth-form__container {
+    padding: 0 32px;
+}
+
+.auth-form__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 12px;
+    margin-top: 10px;
+}
+
+.auth-form__heading {
+    font-size: 2.2rem;
+    font-weight: 400;
+    color: var(--text-color);
+}
+
+.auth-form__switch-btn {
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: var(--primary-color);
+    cursor: pointer;
+}
+
+.auth-form__form {
+
+}
+
+.auth-form__input {
+    width: 100%;
+    height: 40px;
+    margin-top: 16px;
+    padding: 0 12px;
+    font-size: 1.4rem;
+    border: 1px solid var(--border-color);
+    border-radius: 2px;
+    outline: none; /* phần này khi bấm chuột vào input hoặc button sẽ nổi lên */
+    box-sizing: border-box; /* lÀM Kích thước không bị thay đổi khi làm dầy padding và border */
+}
+
+/* Khi trỏ chuột ở đó thì có tác vụ gì */
+.auth-form__input:focus {
+    border-color: #888;
+}
+
+
+.auth-form__aside {
+    margin-top: 18px;
+}
+
+.auth-form__policy-text {
+    font-size: 1.2rem;
+    line-height: 1.7rem;
+    text-align: center;
+    padding: 0 12px;
+}
+
+.auth-form__text-link {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.auth-form__controls {
+    margin-top: 50px;
+    display: flex;
+    justify-content: flex-end;
+
+}
+
+.auth-form__controls-back {
+    margin-right: 8px;
+}
+
+.auth-form__socials {
+    background-color: #F5F5F5;
+    padding: 14px 36px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 22px;
+}
+
+.auth-form__socials-icon {
+    font-size: 1.8rem;
+}
+
+
+.auth-form__socials-google,
+.auth-form__socials-facebook {
+    color: var(--white-color);
+}
+
+.auth-form__socials-facebook {
+    background-color: #3A5A98;
+    color: var(--white-color);
+}
+
+
+.auth-form__socials-google {
+    background-color: var(--white-color);
+    color: #666;
+}
+
+.auth-form__socials-title {
+    margin:0 36px;
+}
+
+
+.auth-form__help {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.auth-form__help-link {
+    font-size: 1.4rem;
+    text-decoration: none;
+    color: #939393;
+}
+
+.auth-form__help-separate {
+    display: block;
+    border-left: 1px solid #EAEAEA;
+    height: 22px;
+    margin: -3px 16px 0;
+}
+
+.auth-form__help-forgot {
+    color: var(--primary-color);
+}

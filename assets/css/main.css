@@ -125,6 +125,17 @@
     /* background-color:red; */
 }
 
+.header__qr::after {
+    position: absolute;
+    left: 0;
+    top: -7px;
+    width: 100%;
+    height: 20px;
+    content: "";
+    display: none;
+    /* background-color:red; */
+}
+
 
 .header__qr-img {
     width: 100%;
@@ -509,29 +520,104 @@
 }
 
 .header__cart {
-    width: 150px;
+    width: 150px; 
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.header__cart-wrap {
+    padding: 0 8px;
+    cursor: pointer;
     
+}
+
+.header__cart-wrap:hover .header__cart-list {
+    display: flex;
+    transform-origin: 85% 0%; /*Thay đổi tâm của animation */
+    animation: headerNotifyGrowth ease-in 0.2s;
+    will-change: opacity, transform; /*Tối ưu chuyển động animation cho nhiều trình duyệt*/
 }
 
 .header__cart-icon {
     color: var(--white-color);
     font-size: 2.4rem;
-    margin-top: 4px;
+    margin-top: 4px;  
+}
+
+.header__search-input-wrap {
+    flex: 1;
+    height: 100%;
+    position: relative;
+}
+
+
+.header__cart-list {
+    position: absolute;
+    top: calc( 100% + 11px );
+    right: 20px;
+    background-color: var(--white-color);
+    width: 400px;
+    border-radius: 2px;
+    box-shadow: 0 1px 3.125rem 0 rgba(0,0,0,0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    display: none;
     
 }
 
+
+.header__cart-list::after {
+    /* background-color: green; */
+    position: absolute;
+    content: "";
+    width: 125px;
+    height: 20px;
+    right: 0px;
+    top: -9px;
+}
+
+.header__cart-list::before {
+    position: absolute;
+    right: 24px;
+    top: -28px;
+    content: "";
+    /* background-color: red; */
+    border-width: 19px 29px;
+    border-style: solid;
+    border-color: transparent transparent var(--white-color) transparent;
+}
+
+
+
+.header__cart-list--no-cart {
+    padding: 24px 0;
+}
+
+.header__cart-no-cart-img {
+    width: 30%;
+    padding: 12px 0;
+}
+
+.header__cart-list--no-cart-msg {
+    font-size: 1.4rem;
+    color: var(--text-color);
+}
+
+
+
 .header__search-input {
-    flex: 1;
+    width: 100%;
     height: 100%;
     border: none;
     outline: none;
     font-size: 1.4rem;
     color: var(--text-color);
     padding: 0 16px;
-    border-radius: 3px;
+    border-radius: 2px;
     /* overflow: hidden;  Tất cả dữ liệu con chồi ra ngoài cha sẽ bị ẩn */
 }
 
@@ -562,7 +648,7 @@
     border: none;
     height: 34px;
     width: 60px;
-    border-radius: 3px;
+    border-radius: 2px;
     margin-right: 3px;
     outline: none;
 }
@@ -591,7 +677,7 @@
     width: 130px;
     box-shadow: 0 1px 3px #ccc; /*Bóng Đổ*/
     padding-left: 0;
-    border-radius: 3px;
+    border-radius: 2px;
     /* overflow: hidden; */
     display: none;
     animation: fadeIn ease-in 0.2s;
@@ -649,4 +735,65 @@
 
 .header__search-option-item--active i {
     display: inline-block;
+}
+
+
+
+
+/* Search History */
+
+.header__search-input:focus ~ .header__search-history{
+    display: block;
+}
+
+.header__search-history {
+    position: absolute;
+    top: calc(100% + 2px);
+    left: 0;
+    width: calc(100% - 16px);
+    background-color: var(--white-color);
+    border-radius: 2px;
+    box-shadow: 0 1px 5px #999;
+    display: none;
+}
+
+.header__search-history-heading {
+    margin: 6px 12px;
+    font-size: 1.4rem;
+    color: #999;
+    font-weight: 400;
+
+}
+
+.header__search-history-list {
+    padding-left: 0;
+    list-style-type: none;
+    margin: 0;
+    
+}
+
+.header__search-history-item {
+    height: 38px;
+    padding: 0px 12px;
+
+}
+
+.header__search-history-item:last-child {
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+.header__search-history-item:hover {
+    background-color: #fafafa;
+    cursor: pointer;
+}
+
+
+.header__search-history-item a { 
+    text-decoration: none;
+    font-size: 1.4rem;
+    color: var(--text-color);
+    line-height: 3.8rem;  /*Canh giữa chữ trong ô bằng cách cho chiều cao chữ bằng đúng chiều cao thẻ*/
+    display: block;
+
 }

@@ -116,9 +116,24 @@
                     <div class="header__logo">
                         <img src="./assets/img/san-pham/logo.png" alt="" class="header__logo-img">
                     </div>
-
+                    <!-- Begin Search -->
                     <div class="header__search">
-                        <input type="text" class="header__search-input" placeholder="Nhập liệu tìm kiếm">
+                        <div class="header__search-input-wrap">
+                            <input type="text" class="header__search-input" placeholder="Nhập liệu tìm kiếm">
+
+                            <!-- Search History -->
+                            <div class="header__search-history">
+                                <h3 class="header__search-history-heading">Lịch Sử Tìm Kiếm</h3>
+                                <ul class="header__search-history-list">
+                                    <li class="header__search-history-item">
+                                        <a href="">Iphone 12 pro max</a>
+                                    </li>
+                                    <li class="header__search-history-item">
+                                        <a href="">Xiaomi Mi 11i </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
                         
                         <div class="header__search-select">
                             <span class="header__search-select-lable">Trong Shop</span>
@@ -140,10 +155,19 @@
                             <i class="header__search-btn-icon fas fa-search"></i>
                         </button>
                     </div>
+                    <!-- End Search -->
 
+                    <!-- Begin Giỏ Hàng -->
                     <div class="header__cart">
-                        <i class="fas fa-shopping-cart header__cart-icon"></i>
+                        <div class="header__cart-wrap">
+                            <i class="fas fa-shopping-cart header__cart-icon"></i>
+                            <div class="header__cart-list header__cart-list--no-cart">
+                                <img src="./assets/img/san-pham/chua-co-san-pham.png" alt="" class="header__cart-no-cart-img">
+                                <span class="header__cart-list--no-cart-msg">Chưa Có Sản Phẩm Nào</span>
+                            </div>
+                        </div>
                     </div>
+                    <!-- End Giỏ Hàng -->
 
                 </div>
                 <!-- End search, logo, giỏ hàng -->
